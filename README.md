@@ -1,6 +1,6 @@
 # Project Name
 
-Job-platform. A brief description of what this React app does.
+Service center platform. A brief description of what this React app does.
 
 ## 🛠️ Tech Stack
 
