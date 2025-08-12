@@ -42,20 +42,22 @@ const App = () => {
 
   return (
     <div className="p-8 text-sm" id="invoice">
-      <div className="border p-4">
-        <h1 className="text-xl font-bold text-center mb-4">HSB CORPORATION</h1>
+      <div><h1>Header </h1></div>
+
+      <div className="p-4">
+        <h1 className="text-xl font-bold text-center mb-4">CTG CORPORATION</h1>
         <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className='border-1 p-3 text-left'>
-            <strong>Service No:</strong> INV-PLCHO-<br />
-            <strong>Product/Model Name:</strong> SO-PLCHO<br />
-            <strong>Name:</strong> HSB CORPORATION<br />
-            <strong>Phone No:</strong> 01823-691254
+          <div className='border-1 p-1 text-left'>
+            <strong>Service No:</strong> <input className='p-1' type="text" name="" id="" /><br />
+            <strong>Model Name:</strong> <input className='p-1' type="text" name="" id="" /><br />
+            <strong>Name:</strong> <input className='p-1' type="text" /><br />
+            <strong>Phone No:</strong> <input className='p-1' type="text" name="" id="" />
           </div>
-          <div className="text-right border-1 p-3">
-            <strong className=''>Date:</strong> 04/08/2025<br />
-            <strong className=''>Time:</strong> 1:32:12 PM<br />
-            <strong className=''>Recieve By:</strong> <input className=' w-2/12' type="text" />
-          </div>ml-4
+          <div className="text-right border-1 p-1">
+            <strong className='w-/12'>Date:</strong> <input className='p-1' type="text" /><br />
+            <strong className='w-/12'>Time:</strong> <input className='p-1' type="text" /> <br />
+            <strong className='w-/12'>Recieve By:</strong> <input className='p-1' type="text" />
+          </div>
         </div>
 
         <table className="w-full border border-collapse">
@@ -122,6 +124,10 @@ const App = () => {
 
         <div className="text-right mt-4 font-bold">
           Total Amount: {items.reduce((acc, item) => acc + parseFloat(calculateTotal(item) || 0), 0).toFixed(2)}
+        </div>
+        <div className='grid grid-cols-2 mt-30 font-bold'>
+            <h4 className=''>CTG FOR SIGNATURE</h4>
+            <h4 className=''>SIGNATURE</h4>
         </div>
 
         <div className="mt-4 text-center print:hidden">
